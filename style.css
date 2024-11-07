@@ -13,6 +13,10 @@ body{
     align-items: center;
     border-bottom: black solid 1px;
     gap:10px;
+    position:sticky;
+    top:0;
+    background-color:white;
+    z-index:1;
 }
 
 .navbar__s1__title{
@@ -27,6 +31,7 @@ body{
     width:60%;
     gap:10px;
     align-items:center;
+    color: transparent;
 }
 .navbar__s2 input{
     border:none;
@@ -43,6 +48,25 @@ body{
     gap: 10px;
     align-items: center;
 }
+.mylearning
+{
+  position:relative;
+  cursor: pointer;
+}
+.mylearning__popup{
+    width:100px;
+    border:solid black 1px;
+    background-color: wheat;
+    color:black;
+    padding:2%;
+    position: absolute;
+    top:150%;
+    right:0;
+    display:none;
+}
+.mylearning:hover .mylearning__popup{
+    display: block;
+}
 .categories
 {
     display:flex;
@@ -56,14 +80,27 @@ body{
     padding:10px;
     border-radius:30px;
 }
+
+.sales img{
+    width:100%;
+}
 .sales{
     width:100%;
-    margin-left: 10%;
+    position:relative;
+}
+.sale__card{
+    width:fit-content;
+    padding:2px;
+    background-color: wheat;
+    border:2px solid black;
+    position:absolute;
+    top:0;
+    left:20%;
+    top:2%
 }
 
 .recommended{
     padding: 10px;
-    margin-left: 10%;
 }
 .recommended__container{
     display: flex;
@@ -82,13 +119,11 @@ body{
 }
 
 .topics{
-    margin-left: 10%;
     padding: 10px;
 }
 .topics__container{
     display: flex;
     gap:10px;
-    margin-top: 10px;
     flex-wrap: wrap;
     
 }
@@ -100,7 +135,6 @@ body{
     flex-grow: 1;
 }
 .popular{
-    margin-left: 10%;
     padding: 10px;
 }
 
@@ -111,7 +145,6 @@ body{
     padding-top: 10px;
 }
 .footer{
-    margin-left: 10%;
     background-color: black;
     color:white;
     padding:30px;
