@@ -3,7 +3,8 @@
     padding:0;
 }
 body{
-    font-family: "Gabarito", serif;;
+    font-family: "Gabarito", serif;
+    margin-left:1%;
 }
 
 .navbar{
@@ -47,6 +48,9 @@ body{
     flex-direction: row;
     gap: 10px;
     align-items: center;
+}
+.navbar__s4{
+    display: none;
 }
 .mylearning
 {
@@ -133,8 +137,10 @@ body{
     padding-top: 10px;
 }
 .Course-card{
-   width: 350px ;
-   
+   /* width: 350px ; */
+   flex-basis: 20%;
+   flex-grow:1;
+   margin: 10px;
 }
 
 .Course-card img{
@@ -186,4 +192,32 @@ body{
     margin: 20px;
     justify-content:space-between;
     align-items: center;
+}
+
+/* Media Queries */
+
+@media screen and (max-width:800px) {
+        body{
+            font-size:10px;
+        } 
+        .Course-card{
+            flex-basis:40%;
+        }
+        .sale__card
+        {
+            margin-left:-5%;
+        }
+}
+
+@media screen and (max-width:600px){
+
+    .categories{
+        display: none;
+    }
+    .navbar__s2,.navbar__s3{
+        display: none;
+    }
+    .navbar__s4{
+        display: block;
+    }
 }
